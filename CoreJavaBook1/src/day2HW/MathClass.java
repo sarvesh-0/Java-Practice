@@ -16,10 +16,7 @@ public class MathClass {
 	public static void main(String[] args) {
 		MathClass m1 = new MathClass();
 		System.out.println("2 Arg :"+m1.add(1,2));
-		MathClass m2 = new MathClass();
 		System.out.println("3 Arg :"+m1.add(1,2,3));
-		MathClass m3 = new MathClass();
-		System.out.println("4 Arg :"+m1.add(1,2,3,4));
-		
+		System.out.println("4 Arg :"+m1.add(1,2,3,4));	
 	}
 }
