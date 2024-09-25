@@ -16,7 +16,7 @@ public class Customer {
 		city = c ;
 	}
 	
-	private void print() {
+	public void print() {
 		System.out.println("Customer Id: "+customerId);
 		System.out.println("Customer Name: "+custname);
 		System.out.println("Customer City: "+city);

@@ -27,7 +27,7 @@ public class Chair {
 	public void setFoaldable(boolean f) {
 		foaldable = f;
 	}
-	private boolean getFoaldable() {
+	public boolean getFoaldable() {
 		return foaldable ;
 	}
 	
