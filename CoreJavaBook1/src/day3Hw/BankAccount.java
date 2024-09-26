@@ -38,7 +38,7 @@ public class BankAccount {
         System.out.println("Customer Name: " + custName);
         System.out.println("Balance: " + balance);
         System.out.println("City: " + city);
-        System.out.println("-----------------------------------------------------");
+//        System.out.println("-----------------------------------------------------");
 	}
 	
     public void displayByAcc(int accountNumber) {
@@ -52,6 +52,9 @@ public class BankAccount {
     public void displayByCity(String cityName) {
         if (this.city.equalsIgnoreCase(cityName)) {
             display();
+        }
+        else {
+        	System.out.println("City Not Found .....................................");
         }
     }
 	
@@ -200,7 +203,7 @@ public class BankAccount {
                     }
                 }
                 if (!found) {
-                    System.out.println("Account not found.");
+                    System.out.println("Invalid Account Number, Account not found.");
                 }
 				break;
 				
@@ -232,6 +235,7 @@ public class BankAccount {
 				break;
 				
 			case 8:
+				System.out.println("...................... Thank You ! ......................");
 				break;
 				
 			default:
