@@ -1,5 +1,5 @@
 package day4_1;
-
+//variable aurgs
 public class MathEngine 
 {
   public void add(int...a)
