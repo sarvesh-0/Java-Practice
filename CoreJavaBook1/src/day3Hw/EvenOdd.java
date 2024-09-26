@@ -5,7 +5,7 @@ package day3Hw;
 import java.util.Scanner;
 public class EvenOdd {
 	
-	public static boolean isEven(int num) {
+	public boolean isEven(int num) {
 		if(num%2==0) {
 			return true;
 		}
@@ -19,7 +19,8 @@ public class EvenOdd {
 		System.out.print("Enter the Number : ");
 		int no = sc.nextInt();
 		sc.close();
-		boolean res = isEven(no);
+		EvenOdd e = new EvenOdd();
+		boolean res = e.isEven(no);
 		if(res) {
 			System.out.println(no+" is Even !");
 		}
