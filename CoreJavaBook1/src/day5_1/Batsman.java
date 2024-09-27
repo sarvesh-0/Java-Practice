@@ -12,13 +12,13 @@ public class Batsman extends Cricketer{
 		super();
 		Scanner sc = new Scanner(System.in);
 		System.out.print("\nEnter Player Runs: ");
-		runs = sc.nextInt();
+		this.runs = sc.nextInt();
 		System.out.print("\nEnter Centuries: ");
-		centuries = sc.nextInt();
+		this.centuries = sc.nextInt();
 		System.out.print("\nEnter halfcenturies ");
-		halfcenturies = sc.nextInt();
+		this.halfcenturies = sc.nextInt();
 		System.out.print("\nEnter Ducks ");
-		ducks = sc.nextInt();
+		this.ducks = sc.nextInt();
 		sc.close();
 	}
 	

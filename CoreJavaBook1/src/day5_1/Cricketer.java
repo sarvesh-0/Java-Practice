@@ -11,11 +11,11 @@ public class Cricketer extends Players{
 		super();
 		Scanner sc = new Scanner(System.in);
 		System.out.print("\nEnter Player Role: ");
-		role = sc.nextLine();
+		this.role = sc.nextLine();
 		System.out.print("\nEnter Match Played: ");
-		matchPlayed = sc.nextInt();
+		this.matchPlayed = sc.nextInt();
 		System.out.print("\nEnter Total Catches: ");
-		catches = sc.nextInt();
+		this.catches = sc.nextInt();
 		sc.close();
 	}
 	

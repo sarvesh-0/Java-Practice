@@ -11,9 +11,9 @@ public class HockeyPlayer extends Players {
 		super();
 		Scanner sc = new Scanner(System.in);
 		System.out.print("\nEnter Player Position: ");
-		position = sc.nextLine();
+		this.position = sc.nextLine();
 		System.out.print("\nEnter Goal Scored: ");
-		goalscored = sc.nextInt();
+		this.goalscored = sc.nextInt();
 		sc.close();
 	}
 	

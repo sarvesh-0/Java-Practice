@@ -5,8 +5,8 @@ public static void main(String[] args) {
 //	Players p1 = new Players();
 //	p1.display();
 //	
-	FootBallPlayer p2 = new FootBallPlayer();
-	p2.display();
+//	FootBallPlayer p2 = new FootBallPlayer();
+//	p2.display();
 //	
 //	HockeyPlayer p3 = new HockeyPlayer();
 //	p3.display();
@@ -17,7 +17,7 @@ public static void main(String[] args) {
 //	Batsman p5 = new Batsman();
 //	p5.display();
 	
-//	Bowler p6 = new Bowler();
-//	p6.display();
+	Bowler p6 = new Bowler();
+	p6.display();
 }
 }

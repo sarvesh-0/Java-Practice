@@ -9,17 +9,16 @@ public class Bowler extends Cricketer {
 	int extras;
 	
 	public Bowler() {
-		super();
-		Scanner sc = new Scanner(System.in);
+		Scanner s = new Scanner(System.in);
 		System.out.print("Enter Player Wickets: ");
-		wickets = sc.nextInt();
+		this.wickets = s.nextInt();
 		System.out.print("\nEnter Hatricks: ");
-		hatricks = sc.nextInt();
+		this.hatricks = s.nextInt();
 		System.out.print("\nEnter dots: ");
-		dots = sc.nextInt();
+		this.dots = s.nextInt();
 		System.out.print("\nEnter extras: ");
-		extras = sc.nextInt();
-		sc.close();
+		this.extras = s.nextInt();
+		s.close();
 	}
 	
 	@Override

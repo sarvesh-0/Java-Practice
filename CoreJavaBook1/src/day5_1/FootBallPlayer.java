@@ -10,9 +10,9 @@ public FootBallPlayer() {
 	super();
 	Scanner sc = new Scanner(System.in);
 	System.out.print("\nEnter Player Position: ");
-	fposition = sc.nextLine();
+	this.fposition = sc.nextLine();
 	System.out.print("\nEnter Goal Scored: ");
-	fgoalscored = sc.nextInt();
+	this.fgoalscored = sc.nextInt();
 	sc.close();
 }
 

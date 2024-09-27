@@ -15,13 +15,13 @@ public class Players {
 	public Players() {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter Player Name: ");
-		playername = sc.nextLine();
+		this.playername = sc.nextLine();
 		System.out.print("\nEnter Player Nationality: ");
-		playerNation = sc.next();
+		this.playerNation = sc.next();
 		System.out.print("\nEnter Player Age: ");
-		playerage = sc.nextInt();
+		this.playerage = sc.nextInt();
 		System.out.print("\nEnter Player Team: ");
-		playerTeam = sc.nextLine();
+		this.playerTeam = sc.nextLine();
 		sc.nextLine();
 	}
 	
