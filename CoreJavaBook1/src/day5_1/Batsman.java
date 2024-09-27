@@ -3,13 +3,12 @@ package day5_1;
 import java.util.Scanner;
 
 public class Batsman extends Cricketer{
-	int runs;
-	int centuries;
-	int halfcenturies;
-	int ducks;
+	protected int runs;
+	protected int centuries;
+	protected int halfcenturies;
+	protected int ducks;
 	
 	public Batsman() {
-		super();
 		Scanner sc = new Scanner(System.in);
 		System.out.print("\nEnter Player Runs: ");
 		this.runs = sc.nextInt();
@@ -19,7 +18,6 @@ public class Batsman extends Cricketer{
 		this.halfcenturies = sc.nextInt();
 		System.out.print("\nEnter Ducks ");
 		this.ducks = sc.nextInt();
-		sc.close();
 	}
 	
 	@Override
@@ -29,5 +27,6 @@ public class Batsman extends Cricketer{
 		System.out.println("Centuries : "+centuries);
 		System.out.println("Half Centuries : "+halfcenturies);
 		System.out.println("Ducks : "+ducks);
+		System.out.println("******************************************************************");
 	}
 }

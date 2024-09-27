@@ -4,23 +4,23 @@ package day5_1;
 import java.util.Scanner;
 
 public class HockeyPlayer extends Players {
-	String position ;
-	int goalscored;
+	protected String position ;
+	protected int goalscored;
 	
 	public HockeyPlayer() {
-		super();
 		Scanner sc = new Scanner(System.in);
 		System.out.print("\nEnter Player Position: ");
-		this.position = sc.nextLine();
+		this.position = sc.next();
 		System.out.print("\nEnter Goal Scored: ");
 		this.goalscored = sc.nextInt();
-		sc.close();
 	}
 	
 	@Override
 	public void display() {
 		super.display();
+		System.out.println("************************* Hockey States **************************");
 		System.out.println("Position : "+position);
 		System.out.println("Goal Scored : "+goalscored);
+		System.out.println("******************************************************************");
 	}
 }
