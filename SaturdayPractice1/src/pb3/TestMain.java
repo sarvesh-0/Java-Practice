@@ -6,7 +6,7 @@ public class TestMain {
 		int bp;
 		
 		Scanner s = new Scanner(System.in);
-		
+
 		System.out.print("\nEnter Book Name   : ");
 		bn = s.nextLine();
 		System.out.print("\nEnter Book Price  : ");
