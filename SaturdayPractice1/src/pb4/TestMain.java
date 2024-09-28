@@ -13,7 +13,7 @@ public class TestMain {
 			b[Book.count] = new Book();
 			b[Book.count-1].setData();
 		}
-		for(int i=0; i<n; i++) {
+		for(int i=0; i<Book.count; i++) {
 			b[i].display();
 		}
 	}
