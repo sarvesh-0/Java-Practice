@@ -1,4 +1,4 @@
-package pb2;
+package pb3;
 
 public class Doctor extends Person {
 	double salary ;
