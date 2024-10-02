@@ -55,5 +55,9 @@ public class BusTicket {
 		this.per = per;
 	}
 	
+	void calculateTotal() {
+		
+	}
+	
 	
 }
