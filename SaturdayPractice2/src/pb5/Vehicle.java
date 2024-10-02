@@ -19,19 +19,50 @@ Write a TestVehicle class to test the functionality.
  */
 package pb5;
 
-public class Vehical implements Loan, Insurance{
+public class Vehicle implements Loan, Insurance{
 	private int vehicleNo;
 	private String modelName;
 	private String vehicleType;
 	private double price;
 	
+    public Vehicle(int vehicleNo, String modelName, String vehicleType, double price) {
+        this.vehicleNo = vehicleNo;
+        this.modelName = modelName;
+        this.vehicleType = vehicleType;
+        this.price = price;
+    }
+	
 	@Override
 	public double issueLoan() {
-		return 0;
+		switch (vehicleType.toLowerCase()) {
+        case "4 wheeler":
+            return 0.75 * price; 
+        case "3 wheeler":
+            return 0.70 * price; 
+        case "2 wheeler":
+            return 0.60 * price; 
+        default:
+            return 0;
+		}
 	}
 	
 	@Override
 	public double takeInsurance() {
-		return 0;
+		if (price <= 150000) {
+            return 4000;
+        } else if (price > 150000 && price <= 300000) {
+            return 4500;
+        } else {
+            return 6000;
+        }
+	}
+	
+	public void show() {
+	        System.out.println("Vehicle No: " + vehicleNo);
+	        System.out.println("Model Name: " + modelName);
+	        System.out.println("Vehicle Type: " + vehicleType);
+	        System.out.println("Vehicle Price: " + price);
+	        System.out.println("Eligible Loan Amount: " + issueLoan());
+	        System.out.println("Insurance Amount: " + takeInsurance());
 	}
 }
