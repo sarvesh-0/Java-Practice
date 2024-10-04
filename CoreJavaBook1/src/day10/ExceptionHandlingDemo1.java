@@ -40,5 +40,4 @@ public class ExceptionHandlingDemo1 {
 	            sc.close();
 	        }
 	}
-	
 }
