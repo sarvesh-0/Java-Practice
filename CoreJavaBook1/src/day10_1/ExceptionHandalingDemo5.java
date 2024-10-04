@@ -1,5 +1,20 @@
 package day10_1;
 import java.util.Scanner;
+
+class InvalidUserNameException extends Exception{
+	String msg;
+	public InvalidUserNameException() {
+		this.msg = "InvalidUserNameException";
+	}
+	@Override
+	public String toString() {
+		return "InvalidUserNameException !!";
+	}
+	@Override
+	public String getMessage() {
+		return "InvalidUserNameException !!" + msg;
+	}
+}
 public class ExceptionHandalingDemo5 {
 	public static void main(String[] args) 
 	 {
@@ -24,17 +39,17 @@ public class ExceptionHandalingDemo5 {
 		   
 		   if(cnt>2)
 		   {
-			   throw new SecurityException("username or password denied..!: Testing...");
+			   throw new InvalidUserNameException();
 		   }
 		   System.out.println("username or password denied..! try again ...:"+cnt);
 		   continue;
 	    }
 		}
 	   } 
-	   catch (SecurityException e) 
+	   catch (InvalidUserNameException e) 
 	   {
 		 e.printStackTrace();
-		 System.out.println("conatct to manager...");
+		 System.out.println("Please Try Again...");
 	   } 
 	 }
 }
