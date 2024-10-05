@@ -31,6 +31,7 @@ public class Camera {
 					throw new ArithmeticException();
 				}
 				float cost = totalCost/no;
+				System.out.println("Cost = "+cost);
 				}catch(ArithmeticException e) {
 			System.out.println("Cannot Divide by Zero. Enter the (non-zero) Number of Cameras Purchsed ...");
 			e.printStackTrace();
