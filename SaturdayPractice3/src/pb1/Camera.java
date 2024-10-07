@@ -7,14 +7,8 @@ Handle this exception and display appropriate message - "Cannot divide by zero. 
 Also handle any other exception occurred.
  */
 package pb1;
+import java.util.InputMismatchException;
 import java.util.Scanner;
-
-class ArithmeticException extends Exception{
-	String msg;
-	public ArithmeticException() {
-		msg = "ArithmeticException";
-	}
-}
 
 public class Camera {
 	public static void main(String[] args) {
@@ -26,19 +20,17 @@ public class Camera {
 			totalCost = sc.nextInt();
 			System.out.print("\nEnter Number of CCTV Cameras Purchased : ");
 			no = sc.nextInt();
-			try {
-				if(no == 0) {
-					throw new ArithmeticException();
-				}
-				float cost = totalCost/no;
-				System.out.println("Cost = "+cost);
-				}catch(ArithmeticException e) {
+			float cost = totalCost/no;
+			System.out.println("Cost = "+cost);
+		}catch(InputMismatchException e) {
+			System.out.println("Input is not an Integer..");
+		}
+		catch(ArithmeticException e) {
 			System.out.println("Cannot Divide by Zero. Enter the (non-zero) Number of Cameras Purchsed ...");
 			e.printStackTrace();
 		}
-		}catch(Exception e) {
-			System.out.println("Input is not an Integer..");
-			e.printStackTrace();
+		finally {
+			sc.close();
 		}
 	}
 }
