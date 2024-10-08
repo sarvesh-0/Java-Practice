@@ -4,10 +4,11 @@ public class Book {
 	private int isbnno;
 	private String bookName;
 	private String authorName;
-	public static int count;
 	
 	public Book() {
-		count ++;
+		this.isbnno = 100;
+		this.bookName = "WingsOfFire";
+		this.authorName = "Dr.Kalam";
 	}
 	
 	public Book(int isbnno, String bookName, String authorName) {
@@ -42,9 +43,11 @@ public class Book {
 	}
 	
 	public void display() {
-		System.out.println("Book Id     : "+this.isbnno);
-		System.out.println("Book Name   : "+this.bookName);
-		System.out.println("Author Name : "+this.authorName);
+		System.out.println("--------------------------------------------------------");
+		System.out.println("            Book Id     : "+this.isbnno);
+		System.out.println("            Book Name   : "+this.bookName);
+		System.out.println("            Author Name : "+this.authorName);
+		System.out.println("--------------------------------------------------------");
 	}
 	
 }
