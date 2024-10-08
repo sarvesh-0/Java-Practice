@@ -110,6 +110,7 @@ public class Library {
 			case 5:
 				System.out.println("_______________________________________________________");
 				System.out.println("Enter Book Name :");
+				System.out.println("_______________________________________________________");
 				System.out.println("Book Count is "+l.countBooks(s.next().toUpperCase()));
 				System.out.println("_______________________________________________________");
 				break;
