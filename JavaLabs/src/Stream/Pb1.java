@@ -1,7 +1,7 @@
 //1. Create an AraryList of 7 integers. Filter the elements that are divisible by 5. Display the numbers.
 package Stream;
 
-import java.util.ArrayList;
+import java.util.ArrayList; 
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
