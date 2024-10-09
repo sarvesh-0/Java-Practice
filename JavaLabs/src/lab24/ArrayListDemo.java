@@ -1,10 +1,12 @@
 package lab24;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 import java.util.Iterator;
+import java.util.Comparator;
 
-class Student{
+class Student implements Comparable <Student>{
 	int id;
 	private String name;
 	private float persentage;
@@ -55,6 +57,23 @@ class Student{
 		System.out.println("Student Percentage : "+this.persentage);
 	}
 	
+	public int compareTo(Student s) {
+		if(this.id > s.id)
+			return 1;
+		if(this.id < s.id)
+			return -1;
+		return 0;
+	}
+	
+}
+
+class StudentNameComparator implements Comparator<Student>{
+	@Override
+	public int compare(Student s1, Student s2) {
+		String name1 = s1.getName();
+		String name2 = s2.getName();
+		return name1.compareTo(name2);
+	}
 }
 
 public class ArrayListDemo {
@@ -65,12 +84,15 @@ public class ArrayListDemo {
 		Scanner sc = new Scanner(System.in);
 		do {
 			System.out.println();
-			System.out.println("Enter 1 to Add Student    :");
-			System.out.println("Enter 2 to Update Student :");
-			System.out.println("Enter 3 to Search Student :");
-			System.out.println("Enter 4 to Delete Student :");
-			System.out.println("Enter 5 to Exit           :");
-			System.out.print("\nPlease Select the Option  : ");
+			System.out.println("Enter 1 to Add Student    ");
+			System.out.println("Enter 2 to Update Student ");
+			System.out.println("Enter 3 to Search Student ");
+			System.out.println("Enter 4 to Delete Student ");
+			System.out.println("Enter 5 to Display All Student    ");
+			System.out.println("Enter 6 to Display Student in Acending Order Of ID ");
+			System.out.println("Enter 6 to Display Student in Acending Order Of Name ");
+			System.out.println("Enter 8 to Exit           ");
+			System.out.print("\nPlease Select the Option  ");
 			opt = sc.nextInt();
 			
 			switch(opt) {
@@ -125,7 +147,37 @@ public class ArrayListDemo {
 					}
 					break;
 					
-				case 5 :
+				case 5:
+					System.out.println();
+					System.out.println("Students Details");
+					for(Student s : arr) {
+						s.display();
+					}
+					System.out.println();
+					break;
+					
+				case 6:
+					System.out.println();
+					System.out.println("Students Details");
+					Collections.sort(arr);
+					
+					for(Student s : arr) {
+						s.display();
+					}
+					System.out.println();
+					break;
+					
+				case 7:
+					System.out.println();
+					System.out.println("Students Details");
+					Collections.sort(arr,new StudentNameComparator());
+					for(Student s : arr) {
+						s.display();
+					}
+					System.out.println();
+					break;
+					
+				case 8 :
 					System.out.println("Thank You !");
 					break;
 					
@@ -134,7 +186,7 @@ public class ArrayListDemo {
 					break;
 			}
 			
-		}while(opt!=5);
+		}while(opt!=8);
 
 	}
 }
