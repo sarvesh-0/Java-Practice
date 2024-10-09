@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Demo4 {
-	public static void main(String[] args) {
+	public static void main(String[] args) { 
 		List<Integer> list = new ArrayList<>(Arrays.asList(1,2,3,4,5));
 		List<Integer> res  = list.stream()
 						.filter(val -> val % 2 == 0)
