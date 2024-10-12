@@ -1,8 +1,8 @@
 package com.seed.library;
 
-import java.io.Serializable; 
+import java.io.Serializable;  
 import java.util.*;
-
+//Book class 
 public class Book implements Serializable, Comparable<Book>{
 	
 	int bid;
